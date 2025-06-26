@@ -40,14 +40,14 @@ export default function HomePage() {
           <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg group relative overflow-hidden p-6">
             <CardContent className="p-6 text-center">
               <Shield className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
-              <h3 className="text-emerald-400 font-bold text-base mb-1">Güvenilir</h3>
+              <h3 className="text-emerald-400 font-bold text-base mb-1">Güvenilir Hizmet</h3>
              
             </CardContent>
           </Card>
           <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg group relative overflow-hidden p-6">
             <CardContent className="p-6 text-center">
               <Users className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
-              <h3 className="text-emerald-400 font-bold text-base mb-1">Deneyimli</h3>
+              <h3 className="text-emerald-400 font-bold text-base mb-1">Deneyimli Kadro</h3>
               
             </CardContent>
           </Card>

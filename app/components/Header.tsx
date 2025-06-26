@@ -83,7 +83,7 @@ export default function Header() {
           </div>
           {/* Sağda buton */}
           <div className="hidden md:block ml-auto">
-            <Button className="px-4 py-2 text-sm rounded-full">
+            <Button className="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-bold shadow-xl transition-all duration-300 rounded-full">
               <Link href="/basvuru">
                 Uzman Görüşü Talep Et
               </Link>
