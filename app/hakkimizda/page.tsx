@@ -120,7 +120,7 @@ export default function HakkimizdaPage() {
 								olmak değil, aynı zamanda hukuk ve teknik uzmanlık arasındaki köprüyü
 								kuran, yargı süreçlerinin gelişimine katkı sağlayan, toplumsal güveni
 								artıran bir çözüm ortağı olmaktır. Teknolojiyi ve uzmanlığı bir araya
-								getirerek müvekkillerimize en yüksek kalitede, etik değerlere bağlı,
+								getirerek yüksek kalitede, etik değerlere bağlı,
 								şeffaf ve sürdürülebilir hizmet sunmayı; bu alanda sektörün standartlarını
 								belirleyen ve sürekli gelişen bir yapı olmayı hedefliyoruz.
 							</p>

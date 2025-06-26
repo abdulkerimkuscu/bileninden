@@ -18,19 +18,9 @@ export default function Footer() {
             </span>
             <p className="text-gray-400 mt-1 max-w-xs text-sm font-medium">
               Türkiye'nin en güvenilir uzman görüşü platformu.<br />
-              Profesyonel bilirkişi hizmetleri.
+              Profesyonel uzmanlık ve danışmanlık hizmetleri.
             </p>
-            <div className="flex gap-2 mt-1">
-              <a href="mailto:info@bilenden.com" className="footer-icon" aria-label="Mail">
-                <Mail className="w-5 h-5" />
-              </a>
-              <a href="tel:+902125550123" className="footer-icon" aria-label="Telefon">
-                <Phone className="w-5 h-5" />
-              </a>
-              <a href="https://maps.google.com/?q=İstanbul" target="_blank" rel="noopener noreferrer" className="footer-icon" aria-label="Adres">
-                <MapPin className="w-5 h-5" />
-              </a>
-            </div>
+            
           </div>
           {/* İletişim */}
           <div>

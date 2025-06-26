@@ -34,28 +34,28 @@ export default function HomePage() {
             <CardContent className="p-6 text-center">
               <FileText className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
               <h3 className="text-emerald-400 font-bold text-base mb-1">Hızlı Rapor</h3>
-              <p className="text-gray-300 text-sm">5-10 iş günü</p>
+              
             </CardContent>
           </Card>
           <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg group relative overflow-hidden p-6">
             <CardContent className="p-6 text-center">
               <Shield className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
               <h3 className="text-emerald-400 font-bold text-base mb-1">Güvenilir</h3>
-              <p className="text-gray-300 text-sm">Uzman kadro</p>
+             
             </CardContent>
           </Card>
           <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg group relative overflow-hidden p-6">
             <CardContent className="p-6 text-center">
               <Users className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
               <h3 className="text-emerald-400 font-bold text-base mb-1">Deneyimli</h3>
-              <p className="text-gray-300 text-sm">15+ yıl tecrübe</p>
+              
             </CardContent>
           </Card>
           <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg group relative overflow-hidden p-6">
             <CardContent className="p-6 text-center">
               <Phone className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
               <h3 className="text-emerald-400 font-bold text-base mb-1">7/24 Destek</h3>
-              <p className="text-gray-300 text-sm">Sürekli iletişim</p>
+              
             </CardContent>
           </Card>
         </div>
@@ -100,7 +100,7 @@ export default function HomePage() {
             <CardContent className="p-8 relative z-10">
               <h2 className="text-2xl font-bold text-emerald-400 mb-6">Türk Hukuk Sisteminde Uzman Görüşünün Yeri</h2>
               <p className="text-gray-200 leading-relaxed text-base text-justify">
-                Mahkeme özellikle özel ve teknik bilgiyi gerektiren konularda, tarafın sunduğu uzman görüşünün dava konusuyla ilgili olması halinde mutlaka dikkate almak ve değerlendirmek zorundadır. Bu anlamda alınan bilirkişi raporuna, taraflardan biri, uzman görüşüne dayanmak suretiyle itiraz etmiş ve bu itirazlar mahkemece hiç değerlendirmeye alınmamış ve itirazlar gerekçeli bir şekilde karşılanmamış ise uzman görüşüne dayanan tarafın 6100 sayılı HMK’nın 27., Anayasa’nın 36. ve Avrupa İnsan Hakları Sözleşmesi’nin 6. maddesinde düzenlenen adil yargılanma hakkının en önemli unsuru olan hukuki dinlenme hakkı ihlal edilmiş olabilecektir. <br /> <br /> (Yargıtay 6.Hukuk Dairesi, E. 2023/3211, K. 2024/4358, T. 26.11.2024)
+                Mahkeme özellikle özel ve teknik bilgiyi gerektiren konularda, tarafın sunduğu uzman görüşünün dava konusuyla ilgili olması halinde mutlaka dikkate almak ve değerlendirmek zorundadır. Bu anlamda alınan bilirkişi raporuna, taraflardan biri, uzman görüşüne dayanmak suretiyle itiraz etmiş ve bu itirazlar mahkemece hiç değerlendirmeye alınmamış ve itirazlar gerekçeli bir şekilde karşılanmamış ise uzman görüşüne dayanan tarafın 6100 sayılı HMK’nın 27., Anayasa’nın 36. ve Avrupa İnsan Hakları Sözleşmesi’nin 6. maddesinde düzenlenen adil yargılanma hakkının en önemli unsuru olan hukuki dinlenme hakkı ihlal edilmiş olabilecektir. <br /> <br /> (Yargıtay 6. Hukuk Dairesi, E. 2023/3211, K. 2024/4358, T. 26.11.2024)
               </p>
             </CardContent>
           </Card>

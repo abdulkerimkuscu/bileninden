@@ -28,7 +28,7 @@ export default function Header() {
           <div className="flex items-center space-x-3 group">
             <Link href="/" className="flex items-center gap-2 select-none">
               {/* B Logo */}
-              <span className="relative flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-gray-900 via-gray-900 via-emerald-600 to-red-600 shadow-lg font-extrabold text-white text-2xl transition-all duration-300">
+              <span className="relative flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-gray-900 via-emerald-600 to-red-600 shadow-lg font-extrabold text-white text-2xl transition-all duration-300">
                 B
               </span>
               {/* Bileninden Yazısı */}
@@ -50,35 +50,35 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4 ml-6">
             <Link
               href="/"
-              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none group
+              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
                 ${pathname === "/" ? "text-red-400" : "text-emerald-300"}
               `}
             >
-              <span className="relative z-10">Ana Sayfa</span>
+              Ana Sayfa
             </Link>
             <Link
               href="/alanlarimiz"
-              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none group
+              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
                 ${pathname === "/alanlarimiz" ? "text-red-400" : "text-emerald-300"}
               `}
             >
-              <span className="relative z-10">Alanlarımız</span>
+              Alanlarımız
             </Link>
             <Link
               href="/hakkimizda"
-              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none group
+              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
                 ${pathname === "/hakkimizda" ? "text-red-400" : "text-emerald-300"}
               `}
             >
-              <span className="relative z-10">Hakkımızda</span>
+              Hakkımızda
             </Link>
             <Link
               href="/iletisim"
-              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none group
+              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
                 ${pathname === "/iletisim" ? "text-red-400" : "text-emerald-300"}
               `}
             >
-              <span className="relative z-10">İletişim</span>
+              İletişim
             </Link>
           </div>
           {/* Sağda buton */}
@@ -100,17 +100,41 @@ export default function Header() {
         </div>
         {/* Mobil menü */}
         {open && (
-          <div className="md:hidden mt-2 bg-gradient-to-br from-gray-900/95 via-gray-800/95 to-emerald-900/80 rounded-2xl shadow-2xl p-6 flex flex-col gap-4 border border-emerald-700/30 animate-fade-in">
-            <Link href="/" className="header-link-mobile" onClick={() => setOpen(false)}>
+          <div className="md:hidden mt-2 bg-gradient-to-br from-gray-900/95 via-gray-800/95 to-emerald-900/80 rounded-2xl shadow-2xl p-6 flex flex-col gap-3 border border-emerald-700/30 animate-fade-in">
+            <Link
+              href="/"
+              className={`block w-full text-center py-3 rounded-xl font-semibold text-lg transition-all duration-200
+                ${pathname === "/" ? "bg-emerald-900/40 text-red-400" : "text-emerald-300 hover:bg-emerald-900/40 hover:text-white"}
+              `}
+              onClick={() => setOpen(false)}
+            >
               Ana Sayfa
             </Link>
-            <Link href="/alanlarimiz" className="header-link-mobile" onClick={() => setOpen(false)}>
+            <Link
+              href="/alanlarimiz"
+              className={`block w-full text-center py-3 rounded-xl font-semibold text-lg transition-all duration-200
+                ${pathname === "/alanlarimiz" ? "bg-emerald-900/40 text-red-400" : "text-emerald-300 hover:bg-emerald-900/40 hover:text-white"}
+              `}
+              onClick={() => setOpen(false)}
+            >
               Alanlarımız
             </Link>
-            <Link href="/hakkimizda" className="header-link-mobile" onClick={() => setOpen(false)}>
+            <Link
+              href="/hakkimizda"
+              className={`block w-full text-center py-3 rounded-xl font-semibold text-lg transition-all duration-200
+                ${pathname === "/hakkimizda" ? "bg-emerald-900/40 text-red-400" : "text-emerald-300 hover:bg-emerald-900/40 hover:text-white"}
+              `}
+              onClick={() => setOpen(false)}
+            >
               Hakkımızda
             </Link>
-            <Link href="/iletisim" className="header-link-mobile" onClick={() => setOpen(false)}>
+            <Link
+              href="/iletisim"
+              className={`block w-full text-center py-3 rounded-xl font-semibold text-lg transition-all duration-200
+                ${pathname === "/iletisim" ? "bg-emerald-900/40 text-red-400" : "text-emerald-300 hover:bg-emerald-900/40 hover:text-white"}
+              `}
+              onClick={() => setOpen(false)}
+            >
               İletişim
             </Link>
             <Button className="bg-gradient-to-r from-emerald-500 to-emerald-700 hover:from-emerald-600 hover:to-emerald-800 text-white w-full rounded-full font-bold shadow-lg text-base mt-2 border-2 border-emerald-300/30" asChild>
