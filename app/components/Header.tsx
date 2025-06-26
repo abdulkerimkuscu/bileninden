@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
@@ -28,12 +30,16 @@ export default function Header() {
               <Link href="/iletisim" className="text-emerald-400 hover:text-emerald-300 transition-colors">
                 İletişim
               </Link>
-              <Button className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg" asChild>
-                <Link href="/basvuru">
-                  Uzman Görüşü Talep Et
-                </Link>
-              </Button>
             </div>
+          </div>
+          {/* Boşluk bırakıp butonu sağa yasla */}
+          <div className="hidden md:block flex-1"></div>
+          <div className="hidden md:block">
+            <Button className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg" asChild>
+              <Link href="/basvuru">
+                Uzman Görüşü Talep Et
+              </Link>
+            </Button>
           </div>
           {/* Mobil menü butonu */}
           <button
