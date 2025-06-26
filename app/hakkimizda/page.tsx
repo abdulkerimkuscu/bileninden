@@ -1,137 +1,192 @@
+"use client"
+
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, Award, Users, Clock, Target } from "lucide-react"
+import { ArrowLeft, Users, Clock, Shield, Phone, DollarSign, Award, Globe, Eye, Sparkles } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
+
+const sliderItems = [
+	{
+		icon: <Users className="w-10 h-10 text-emerald-400 mb-3" />,
+		title: "Uzman Kadro",
+		desc: "Alanında uzman, deneyimli bilirkişiler",
+	},
+	{
+		icon: <Clock className="w-10 h-10 text-emerald-400 mb-3" />,
+		title: "Hızlı Hizmet",
+		desc: "5-10 iş günü içinde rapor teslimi",
+	},
+	{
+		icon: <Shield className="w-10 h-10 text-emerald-400 mb-3" />,
+		title: "Güvenilir Sonuçlar",
+		desc: "Bilimsel yöntemlerle hazırlanan raporlar",
+	},
+	{
+		icon: <Phone className="w-10 h-10 text-emerald-400 mb-3" />,
+		title: "7/24 Destek",
+		desc: "Sürekli iletişim ve destek hizmeti",
+	},
+	{
+		icon: <DollarSign className="w-10 h-10 text-emerald-400 mb-3" />,
+		title: "Uygun Fiyat",
+		desc: "Rekabetçi ve şeffaf fiyatlandırma",
+	},
+	{
+		icon: <Award className="w-10 h-10 text-emerald-400 mb-3" />,
+		title: "Mahkeme Uyumlu",
+		desc: "Hukuki süreçlere uygun format",
+	},
+]
 
 export default function HakkimizdaPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="mb-8">
-          <Link
-            href="/"
-            className="inline-flex items-center text-emerald-400 hover:text-emerald-300 transition-colors mb-4"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Ana Sayfaya Dön
-          </Link>
-          <h1 className="text-4xl font-bold text-white mb-4">Hakkımızda</h1>
-          <p className="text-gray-300 text-lg">
-            Türkiye'nin en güvenilir uzman görüşü platformu olarak hizmet veriyoruz.
-          </p>
-        </div>
+	const [current, setCurrent] = useState(0)
+	const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-emerald-400">Misyonumuz</h2>
-            <p className="text-gray-300 leading-relaxed">
-              BilEnden olarak, hukuki süreçlerde ihtiyaç duyulan teknik ve bilimsel konularda en güvenilir uzman
-              görüşlerini sunmayı misyon edinmiş bir platformuz. Trafik kazası analizlerinden aktüeryal
-              değerlendirmelere kadar geniş bir yelpazede profesyonel hizmet vermekteyiz.
-            </p>
-            <p className="text-gray-300 leading-relaxed">
-              15 yılı aşkın deneyimimiz ile mahkemelerde, sigorta şirketlerinde ve hukuk bürolarında güvenilir bir
-              partner olarak yer almaktayız.
-            </p>
-          </div>
-          <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-emerald-400">Vizyonumuz</h2>
-            <p className="text-gray-300 leading-relaxed">
-              Türkiye'de uzman görüşü alanında lider platform olmak ve hukuki süreçlerin daha adil, hızlı ve bilimsel
-              temellere dayalı olarak yürütülmesine katkı sağlamak.
-            </p>
-            <p className="text-gray-300 leading-relaxed">
-              Teknoloji ve uzmanlığı birleştirerek, müvekkillerimize en kaliteli hizmeti sunmak ve sektörde standartları
-              belirleyen bir kurum olmak hedefimizdir.
-            </p>
-          </div>
-        </div>
+	useEffect(() => {
+		timeoutRef.current = setTimeout(() => {
+			setCurrent((prev) => (prev + 1) % sliderItems.length)
+		}, 2500)
+		return () => {
+			if (timeoutRef.current) clearTimeout(timeoutRef.current)
+		}
+	}, [current])
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          <Card className="bg-gray-800/30 border-gray-700 text-center">
-            <CardContent className="p-6">
-              <Award className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
-              <h3 className="text-white font-semibold mb-2">15+ Yıl</h3>
-              <p className="text-gray-400">Deneyim</p>
-            </CardContent>
-          </Card>
-          <Card className="bg-gray-800/30 border-gray-700 text-center">
-            <CardContent className="p-6">
-              <Users className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
-              <h3 className="text-white font-semibold mb-2">1000+</h3>
-              <p className="text-gray-400">Memnun Müşteri</p>
-            </CardContent>
-          </Card>
-          <Card className="bg-gray-800/30 border-gray-700 text-center">
-            <CardContent className="p-6">
-              <Clock className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
-              <h3 className="text-white font-semibold mb-2">5-10</h3>
-              <p className="text-gray-400">İş Günü Teslimat</p>
-            </CardContent>
-          </Card>
-          <Card className="bg-gray-800/30 border-gray-700 text-center">
-            <CardContent className="p-6">
-              <Target className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
-              <h3 className="text-white font-semibold mb-2">%98</h3>
-              <p className="text-gray-400">Başarı Oranı</p>
-            </CardContent>
-          </Card>
-        </div>
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-x-hidden relative">
+			{/* Glow ve parallax arka plan */}
+			<div className="pointer-events-none fixed inset-0 z-0">
+				<div className="absolute left-1/2 top-0 -translate-x-1/2 w-[120vw] h-[60vh] bg-gradient-radial from-emerald-400/30 via-emerald-600/10 to-transparent blur-3xl opacity-70 animate-pulse" />
+				<div className="absolute right-0 bottom-0 w-[60vw] h-[40vh] bg-gradient-to-br from-emerald-400/20 to-transparent blur-2xl opacity-60" />
+				<div className="absolute left-0 bottom-0 w-[40vw] h-[30vh] bg-gradient-to-tr from-red-400/10 to-transparent blur-2xl opacity-40" />
+			</div>
 
-        <Card className="bg-gray-800/30 border-gray-700">
-          <CardContent className="p-8">
-            <h2 className="text-2xl font-bold text-emerald-400 mb-6">Neden BilEnden?</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2"></span>
-                  <div>
-                    <h4 className="text-white font-semibold">Uzman Kadro</h4>
-                    <p className="text-gray-400">Alanında uzman, deneyimli bilirkişiler</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2"></span>
-                  <div>
-                    <h4 className="text-white font-semibold">Hızlı Hizmet</h4>
-                    <p className="text-gray-400">5-10 iş günü içinde rapor teslimi</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2"></span>
-                  <div>
-                    <h4 className="text-white font-semibold">Güvenilir Sonuçlar</h4>
-                    <p className="text-gray-400">Bilimsel yöntemlerle hazırlanan raporlar</p>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2"></span>
-                  <div>
-                    <h4 className="text-white font-semibold">7/24 Destek</h4>
-                    <p className="text-gray-400">Sürekli iletişim ve destek hizmeti</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2"></span>
-                  <div>
-                    <h4 className="text-white font-semibold">Uygun Fiyat</h4>
-                    <p className="text-gray-400">Rekabetçi ve şeffaf fiyatlandırma</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2"></span>
-                  <div>
-                    <h4 className="text-white font-semibold">Mahkeme Uyumlu</h4>
-                    <p className="text-gray-400">Hukuki süreçlere uygun format</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  )
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+				<div className="mb-8">
+					<Link
+						href="/"
+						className="inline-flex items-center text-emerald-400 hover:text-emerald-300 transition-colors mb-4"
+					>
+						<ArrowLeft className="w-4 h-4 mr-2" />
+						Ana Sayfaya Dön
+					</Link>
+					<span className="text-3xl font-extrabold bg-gradient-to-br from-emerald-400 via-white to-emerald-600 bg-clip-text text-transparent tracking-tight drop-shadow-lg animate-fade-in">
+						Hakkımızda
+					</span>
+					<p className="text-gray-300 text-lg mt-2 animate-fade-in-slow">
+						Türkiye'nin en güvenilir uzman görüşü platformu olarak hizmet veriyoruz.
+					</p>
+				</div>
+
+				<div className="grid lg:grid-cols-2 gap-12 mb-16">
+					{/* Misyon */}
+					<div className="relative rounded-2xl bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border border-emerald-500 shadow-2xl p-8 overflow-hidden">
+						<div className="absolute -top-8 -left-8 opacity-10">
+							<Globe className="w-40 h-40 text-emerald-400" />
+						</div>
+						<div className="relative z-10">
+							<div className="flex items-center gap-3 mb-4">
+								<Globe className="w-8 h-8 text-emerald-400 drop-shadow" />
+								<h2 className="text-2xl font-bold text-emerald-300 drop-shadow">
+									Misyonumuz
+								</h2>
+							</div>
+							<p className="text-gray-200 leading-relaxed text-justify text-lg font-medium drop-shadow">
+								Amacımız; teknik, bilimsel ve özel bilgi gerektiren hukuki uyuşmazlıklarda,
+								taraflara güvenilir, tarafsız ve profesyonel uzman görüşü temin etmek, adil
+								yargılamaya katkı sağlamaktır. Tarafların kendi belirledikleri uzmanlar
+								arasından olaylara dair bilimsel ve objektif değerlendirmeler almasını
+								sağlıyor; bu görüşlerin mahkemeye sunulmasıyla davaların daha sağlıklı ve
+								isabetli şekilde sonuçlandırılmasına yardımcı oluyoruz. Uzman görüşü
+								hizmetini, yüksek etik standartlara bağlı, şeffaf ve kaliteli bir anlayışla
+								sunarak, hukuk dünyasında güvenilir bir başvuru kaynağı olmayı hedefliyoruz.
+							</p>
+						</div>
+					</div>
+					{/* Vizyon */}
+					<div className="relative rounded-2xl bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border border-emerald-500 shadow-2xl p-8 overflow-hidden">
+						<div className="absolute -top-8 -right-8 opacity-10">
+							<Eye className="w-40 h-40 text-emerald-400" />
+						</div>
+						<div className="relative z-10">
+							<div className="flex items-center gap-3 mb-4">
+								<Eye className="w-8 h-8 text-emerald-400 drop-shadow" />
+								<h2 className="text-2xl font-bold text-emerald-300 drop-shadow">
+									Vizyonumuz
+								</h2>
+							</div>
+							<p className="text-gray-200 leading-relaxed text-justify text-lg font-medium drop-shadow">
+								Türkiye’de uzman görüşü alanında öncü ve güvenilir bir platform olarak,
+								hukuki süreçlerin daha adil, hızlı ve bilimsel temellere dayalı şekilde
+								yürütülmesine öncülük etmek istiyoruz. Yalnızca bir hizmet sağlayıcısı
+								olmak değil, aynı zamanda hukuk ve teknik uzmanlık arasındaki köprüyü
+								kuran, yargı süreçlerinin gelişimine katkı sağlayan, toplumsal güveni
+								artıran bir çözüm ortağı olmaktır. Teknolojiyi ve uzmanlığı bir araya
+								getirerek müvekkillerimize en yüksek kalitede, etik değerlere bağlı,
+								şeffaf ve sürdürülebilir hizmet sunmayı; bu alanda sektörün standartlarını
+								belirleyen ve sürekli gelişen bir yapı olmayı hedefliyoruz.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				{/* Neden Bileninden Slider */}
+				<div className="w-full flex flex-col items-center">
+					<h2 className="text-2xl font-bold text-emerald-400 mb-6">Neden Bileninden?</h2>
+					<div className="relative w-full max-w-xs min-h-[220px] flex items-center justify-center mx-auto">
+						{sliderItems.map((item, i) => (
+							<div
+								key={i}
+								className={`absolute left-0 top-0 w-full transition-all duration-700 ${
+									i === current
+										? "opacity-100 scale-100 z-10"
+										: "opacity-0 scale-95 z-0 pointer-events-none"
+								}`}
+							>
+								<div className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 rounded-xl p-8 flex flex-col items-center text-center border border-gray-700 shadow-lg">
+									{item.icon}
+									<h4 className="text-white font-semibold mb-1">{item.title}</h4>
+									<p className="text-gray-400 text-sm">{item.desc}</p>
+								</div>
+							</div>
+						))}
+					</div>
+					{/* Slider dots */}
+					<div className="flex justify-center gap-2 mt-4">
+						{sliderItems.map((_, i) => (
+							<button
+								key={i}
+								className={`w-2 h-2 rounded-full transition-all ${
+									i === current ? "bg-emerald-400" : "bg-gray-600"
+								}`}
+								onClick={() => setCurrent(i)}
+								aria-label={`Avantaj ${i + 1}`}
+							/>
+						))}
+					</div>
+				</div>
+			</div>
+			{/* Animasyonlar için ekstra stiller */}
+			<style>{`
+        @keyframes spin-slow {
+          0% { transform: rotate(0deg);}
+          100% { transform: rotate(360deg);}
+        }
+        .animate-spin-slow {
+          animation: spin-slow 8s linear infinite;
+        }
+        @keyframes glow {
+          0%,100% { box-shadow: 0 0 24px 8px #34d39944, 0 0 0 0 #fff0;}
+          50% { box-shadow: 0 0 48px 16px #34d39999, 0 0 0 0 #fff0;}
+        }
+        .animate-glow {
+          animation: glow 3s ease-in-out infinite;
+        }
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(30px);}
+          to { opacity: 1; transform: translateY(0);}
+        }
+        .animate-fade-in { animation: fade-in 1s cubic-bezier(.4,0,.2,1) both; }
+        .animate-fade-in-slow { animation: fade-in 1.5s .2s cubic-bezier(.4,0,.2,1) both; }
+      `}</style>
+		</div>
+	)
 }

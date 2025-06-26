@@ -1,17 +1,7 @@
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
-  Car, // Trafik
-  Briefcase, // İşçilik
-  Home, // Taşınmaz
-  Users, // Miras
-  BookOpen, // Adli Muhasebe
-  Hammer, // İnşaat
-  Zap, // Elektrik
-  HardHat, // İşyeri Kazaları
-  Leaf, // Tarım
-  FileText, // Dijital Belge
-  ArrowLeft
+  Car, Briefcase, Home, Users, BookOpen, Hammer, Zap, HardHat, Leaf, FileText, ArrowLeft
 } from "lucide-react"
 
 export default function AlanlarimizPage() {
@@ -128,9 +118,15 @@ export default function AlanlarimizPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="mb-8">
+    <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-x-hidden">
+      {/* Parallax ve Glow efektli arka plan */}
+      <div className="pointer-events-none fixed inset-0 z-0">
+        <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[120vw] h-[60vh] bg-gradient-radial from-emerald-400/30 via-emerald-600/10 to-transparent blur-3xl opacity-70 animate-pulse" />
+        <div className="absolute right-0 bottom-0 w-[60vw] h-[40vh] bg-gradient-to-br from-emerald-400/20 to-transparent blur-2xl opacity-60" />
+        <div className="absolute left-0 bottom-0 w-[40vw] h-[30vh] bg-gradient-to-tr from-red-400/10 to-transparent blur-2xl opacity-40" />
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mb-8 text-center">
           <Link
             href="/"
             className="inline-flex items-center text-emerald-400 hover:text-emerald-300 transition-colors mb-4"
@@ -138,39 +134,49 @@ export default function AlanlarimizPage() {
             <ArrowLeft className="w-4 h-4 mr-2" />
             Ana Sayfaya Dön
           </Link>
-          <h1 className="text-4xl font-bold text-white mb-4">Hizmet Alanlarımız</h1>
-          <p className="text-gray-300 text-lg">Uzman bilirkişi hizmetlerimiz ile profesyonel çözümler sunuyoruz.</p>
+          <h1 className="text-5xl font-extrabold bg-gradient-to-br from-emerald-400 via-white to-emerald-600 bg-clip-text text-transparent drop-shadow-2xl mb-4 animate-fade-in">
+            Hizmet Alanlarımız
+          </h1>
+          <p className="text-gray-300 text-xl max-w-2xl mx-auto animate-fade-in-slow">
+            Uzman bilirkişi hizmetlerimiz ile profesyonel çözümler sunuyoruz.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon
             return (
-              <Card key={index} className="bg-gray-800/30 border-gray-700 hover:bg-gray-700/30 transition-colors h-full flex flex-col">
+              <Card
+                key={index}
+                className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg group relative overflow-hidden p-3"
+              >
+                <div className="absolute -top-8 -right-8 opacity-10 transition-all duration-500">
+                  <Icon className="w-28 h-28 text-emerald-400" />
+                </div>
                 <CardHeader>
-                  <div className="flex items-center space-x-4">
-                    <Icon className="w-12 h-12 text-emerald-400" />
-                    <CardTitle className="text-white text-xl">{service.title}</CardTitle>
+                  <div className="flex items-center space-x-3">
+                    <Icon className="w-8 h-8 text-emerald-400 drop-shadow-lg" />
+                    <CardTitle className="text-white text-lg font-bold drop-shadow">{service.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="flex flex-col h-full">
                   <div>
-                    <p className="text-gray-300">{service.description}</p>
-                    <div className="space-y-2 mt-4">
-                      <h4 className="text-emerald-400 font-semibold">Hizmet Kapsamı:</h4>
-                      <ul className="space-y-1">
+                    <p className="text-gray-300 text-base">{service.description}</p>
+                    <div className="space-y-1 mt-2">
+                      <h4 className="text-emerald-400 font-semibold text-sm">Hizmet Kapsamı:</h4>
+                      <ul className="space-y-0.5">
                         {service.features.map((feature, idx) => (
-                          <li key={idx} className="text-gray-400 flex items-center">
-                            <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                          <li key={idx} className="text-gray-400 flex items-center text-sm">
+                            <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
                   </div>
-                  <div className="mt-auto pt-6">
-                    <span className="text-sm text-emerald-400 font-semibold">Başvuru yapılan bilirkişiler: </span>
-                    <span className="text-gray-300 text-sm">{service.experts}</span>
+                  <div className="mt-auto pt-3">
+                    <span className="text-xs text-emerald-400 font-semibold">Başvuru yapılan bilirkişiler: </span>
+                    <span className="text-gray-300 text-xs">{service.experts}</span>
                   </div>
                 </CardContent>
               </Card>
@@ -178,6 +184,15 @@ export default function AlanlarimizPage() {
           })}
         </div>
       </div>
+      {/* Animasyonlar için ekstra stiller */}
+      <style>{`
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(30px);}
+          to { opacity: 1; transform: translateY(0);}
+        }
+        .animate-fade-in { animation: fade-in 1s cubic-bezier(.4,0,.2,1) both; }
+        .animate-fade-in-slow { animation: fade-in 1.5s .2s cubic-bezier(.4,0,.2,1) both; }
+      `}</style>
     </div>
   )
 }
