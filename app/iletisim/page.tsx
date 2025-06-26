@@ -15,7 +15,7 @@ export default function IletisimPage() {
         <div className="absolute left-0 bottom-0 w-[30vw] h-[20vh] bg-gradient-to-tr from-red-400/10 to-transparent blur-2xl opacity-40" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-        <div className="mb-8">
+        <div className="mb-8 flex flex-col items-center justify-center text-center">
           <Link
             href="/"
             className="inline-flex items-center text-emerald-400 hover:text-emerald-300 transition-colors mb-4"
@@ -23,18 +23,17 @@ export default function IletisimPage() {
             <ArrowLeft className="w-4 h-4 mr-2" />
             Ana Sayfaya Dön
           </Link>
-          <span className="flex items-center gap-2 text-3xl font-extrabold bg-gradient-to-br from-emerald-400 via-white to-emerald-600 bg-clip-text text-transparent tracking-tight drop-shadow-lg animate-fade-in">
-
+          <h1 className="text-5xl font-extrabold bg-gradient-to-br from-emerald-400 via-white to-emerald-600 bg-clip-text text-transparent drop-shadow-2xl mb-4 animate-fade-in">
             İletişim
-          </span>
-          <p className="text-gray-300 text-lg mt-2 animate-fade-in-slow">
+          </h1>
+          <p className="text-gray-300 text-lg mt-2 animate-fade-in-slow max-w-2xl mx-auto">
             Uzman görüşü talepleriniz ve sorularınız için bizimle iletişime geçin.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="bg-gray-800/30 border-emerald-600 shadow-xl animate-fade-in">
+          <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-xl animate-fade-in">
             <CardHeader>
               <CardTitle className="text-white text-xl">Bize Ulaşın</CardTitle>
             </CardHeader>
@@ -86,7 +85,7 @@ export default function IletisimPage() {
 
           {/* Contact Information */}
           <div className="space-y-6">
-            <Card className="bg-gray-800/30 border-emerald-600 shadow-lg animate-fade-in-slow">
+            <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4 mb-4">
                   <Phone className="w-8 h-8 text-emerald-400" />
@@ -99,7 +98,7 @@ export default function IletisimPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-800/30 border-emerald-600 shadow-lg animate-fade-in-slow">
+            <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4 mb-4">
                   <Mail className="w-8 h-8 text-emerald-400" />
@@ -112,7 +111,7 @@ export default function IletisimPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-800/30 border-emerald-600 shadow-lg animate-fade-in-slow">
+            <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4 mb-4">
                   <MapPin className="w-8 h-8 text-emerald-400" />
@@ -130,7 +129,7 @@ export default function IletisimPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-800/30 border-emerald-600 shadow-lg animate-fade-in-slow">
+            <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4 mb-4">
                   <Clock className="w-8 h-8 text-emerald-400" />
@@ -144,7 +143,7 @@ export default function IletisimPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-emerald-500/10 border-emerald-500/30 shadow-lg animate-fade-in-slow">
+            <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
               <CardContent className="p-6">
                 <h3 className="text-emerald-400 font-semibold mb-2">Hızlı Talep</h3>
                 <p className="text-gray-300 mb-4">Acil uzman görüşü talepleriniz için direkt arayın:</p>

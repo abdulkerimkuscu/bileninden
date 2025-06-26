@@ -60,7 +60,7 @@ export default function HakkimizdaPage() {
 			</div>
 
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-				<div className="mb-8">
+				<div className="mb-8 flex flex-col items-center justify-center text-center">
 					<Link
 						href="/"
 						className="inline-flex items-center text-emerald-400 hover:text-emerald-300 transition-colors mb-4"
@@ -68,28 +68,28 @@ export default function HakkimizdaPage() {
 						<ArrowLeft className="w-4 h-4 mr-2" />
 						Ana Sayfaya Dön
 					</Link>
-					<span className="text-3xl font-extrabold bg-gradient-to-br from-emerald-400 via-white to-emerald-600 bg-clip-text text-transparent tracking-tight drop-shadow-lg animate-fade-in">
-						Hakkımızda
-					</span>
-					<p className="text-gray-300 text-lg mt-2 animate-fade-in-slow">
+					 <h1 className="text-5xl font-extrabold bg-gradient-to-br from-emerald-400 via-white to-emerald-600 bg-clip-text text-transparent drop-shadow-2xl mb-4 animate-fade-in">
+            			Hakkımızda
+          			  </h1>
+					<p className="text-gray-300 text-lg mt-2 animate-fade-in-slow max-w-2xl">
 						Türkiye'nin en güvenilir uzman görüşü platformu olarak hizmet veriyoruz.
 					</p>
 				</div>
 
-				<div className="grid lg:grid-cols-2 gap-12 mb-16">
+				<div className="grid lg:grid-cols-2 gap-8 mb-12">
 					{/* Misyon */}
-					<div className="relative rounded-2xl bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border border-emerald-500 shadow-2xl p-8 overflow-hidden">
+					<div className="relative rounded-xl bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border border-emerald-500 shadow-xl p-5 overflow-hidden">
 						<div className="absolute -top-8 -left-8 opacity-10">
-							<Globe className="w-40 h-40 text-emerald-400" />
+							<Globe className="w-28 h-28 text-emerald-400" />
 						</div>
 						<div className="relative z-10">
-							<div className="flex items-center gap-3 mb-4">
-								<Globe className="w-8 h-8 text-emerald-400 drop-shadow" />
-								<h2 className="text-2xl font-bold text-emerald-300 drop-shadow">
+							<div className="flex items-center gap-3 mb-3">
+								<Globe className="w-7 h-7 text-emerald-400 drop-shadow" />
+								<h2 className="text-xl font-bold text-emerald-300 drop-shadow">
 									Misyonumuz
 								</h2>
 							</div>
-							<p className="text-gray-200 leading-relaxed text-justify text-lg font-medium drop-shadow">
+							<p className="text-gray-200 leading-relaxed text-justify text-base font-medium drop-shadow">
 								Amacımız; teknik, bilimsel ve özel bilgi gerektiren hukuki uyuşmazlıklarda,
 								taraflara güvenilir, tarafsız ve profesyonel uzman görüşü temin etmek, adil
 								yargılamaya katkı sağlamaktır. Tarafların kendi belirledikleri uzmanlar
@@ -102,18 +102,18 @@ export default function HakkimizdaPage() {
 						</div>
 					</div>
 					{/* Vizyon */}
-					<div className="relative rounded-2xl bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border border-emerald-500 shadow-2xl p-8 overflow-hidden">
+					<div className="relative rounded-xl bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border border-emerald-500 shadow-xl p-5 overflow-hidden">
 						<div className="absolute -top-8 -right-8 opacity-10">
-							<Eye className="w-40 h-40 text-emerald-400" />
+							<Eye className="w-28 h-28 text-emerald-400" />
 						</div>
 						<div className="relative z-10">
-							<div className="flex items-center gap-3 mb-4">
-								<Eye className="w-8 h-8 text-emerald-400 drop-shadow" />
-								<h2 className="text-2xl font-bold text-emerald-300 drop-shadow">
+							<div className="flex items-center gap-3 mb-3">
+								<Eye className="w-7 h-7 text-emerald-400 drop-shadow" />
+								<h2 className="text-xl font-bold text-emerald-300 drop-shadow">
 									Vizyonumuz
 								</h2>
 							</div>
-							<p className="text-gray-200 leading-relaxed text-justify text-lg font-medium drop-shadow">
+							<p className="text-gray-200 leading-relaxed text-justify text-base font-medium drop-shadow">
 								Türkiye’de uzman görüşü alanında öncü ve güvenilir bir platform olarak,
 								hukuki süreçlerin daha adil, hızlı ve bilimsel temellere dayalı şekilde
 								yürütülmesine öncülük etmek istiyoruz. Yalnızca bir hizmet sağlayıcısı
@@ -130,8 +130,8 @@ export default function HakkimizdaPage() {
 
 				{/* Neden Bileninden Slider */}
 				<div className="w-full flex flex-col items-center">
-					<h2 className="text-2xl font-bold text-emerald-400 mb-6">Neden Bileninden?</h2>
-					<div className="relative w-full max-w-xs min-h-[220px] flex items-center justify-center mx-auto">
+					<h2 className="text-3xl font-bold text-emerald-400 mb-8">Neden Bileninden?</h2>
+					<div className="relative w-full max-w-md min-h-[220px] flex items-center justify-center mx-auto">
 						{sliderItems.map((item, i) => (
 							<div
 								key={i}
@@ -141,10 +141,10 @@ export default function HakkimizdaPage() {
 										: "opacity-0 scale-95 z-0 pointer-events-none"
 								}`}
 							>
-								<div className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 rounded-xl p-8 flex flex-col items-center text-center border border-gray-700 shadow-lg">
+								<div className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 rounded-xl p-10 flex flex-col items-center text-center border border-gray-700 shadow-lg">
 									{item.icon}
-									<h4 className="text-white font-semibold mb-1">{item.title}</h4>
-									<p className="text-gray-400 text-sm">{item.desc}</p>
+									<h4 className="text-white font-semibold mb-1 text-lg">{item.title}</h4>
+									<p className="text-gray-400 text-base">{item.desc}</p>
 								</div>
 							</div>
 						))}

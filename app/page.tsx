@@ -22,7 +22,7 @@ export default function HomePage() {
           <span className="block">Adalet.</span>
         </h1>
         <p className="mt-8 text-xl lg:text-2xl text-gray-200 max-w-2xl mx-auto animate-fade-in-slow2">
-          Dava dosyalarındaki teknik konular için <span className="text-emerald-400 font-semibold">uzman bilirkişilerden</span> profesyonel hizmet alın. Bilimsel, hızlı ve güvenilir raporlarla adil yargılamaya katkı sağlayın.
+          Dava dosyalarındaki teknik konular için <span className="text-emerald-400 font-semibold">uzman bilirkişilerden</span> profesyonel hizmet alın. Bilimsel, hızlı ve güvenilir raporlarla davanıza yön verin.
         </p>
         
       </div>
