@@ -54,7 +54,7 @@ export default function ContactFab() {
       )}
       <button
         onClick={() => setOpen((v) => !v)}
-        className={`w-12 h-12 flex items-center justify-center rounded-full bg-[#b39ddb] shadow-xl transition-all duration-200 hover:scale-110`}
+        className={`w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 shadow-xl transition-all duration-200 hover:scale-110 animate-fab-pulse`}
         aria-label={open ? "Kapat" : "İletişim Kanalları"}
       >
         {open ? (
@@ -63,6 +63,15 @@ export default function ContactFab() {
           <MessageCircle className="text-white w-7 h-7" />
         )}
       </button>
+      <style jsx global>{`
+        @keyframes fab-pulse {
+          0%, 100% { box-shadow: 0 0 16px 0 #05966944, 0 0 0 0 #fff0; }
+          50% { box-shadow: 0 0 32px 8px #05966966, 0 0 0 0 #fff0; }
+        }
+        .animate-fab-pulse {
+          animation: fab-pulse 2.5s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   )
 }
