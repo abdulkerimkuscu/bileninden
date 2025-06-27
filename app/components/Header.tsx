@@ -34,7 +34,7 @@ export default function Header() {
               {/* Bileninden Yazısı */}
               <span
                 ref={logoTextRef}
-                className={`ml-1 text-xl font-extrabold bg-gradient-to-br from-emerald-400  to-emerald-600 bg-clip-text text-transparent tracking-tight drop-shadow-lg transition-all duration-500
+                className={`ml-1 text-xl font-extrabold bg-gradient-to-br from-emerald-400 via-white to-emerald-600 bg-clip-text text-transparent tracking-tight drop-shadow-lg transition-all duration-500
                   ${scrolled ? "opacity-0 translate-x-[-24px] scale-75 pointer-events-none" : "opacity-100 translate-x-0 scale-100"}
                 `}
                 style={{
@@ -50,32 +50,32 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4 ml-6">
             <Link
               href="/"
-              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
-                ${pathname === "/" ? "text-red-400" : "text-emerald-300"}
+              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
+                ${pathname === "/" ? "text-red-400" : "text-emerald-400"}
               `}
             >
               Ana Sayfa
             </Link>
             <Link
               href="/alanlarimiz"
-              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
-                ${pathname === "/alanlarimiz" ? "text-red-400" : "text-emerald-300"}
+              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
+                ${pathname === "/alanlarimiz" ? "text-red-400" : "text-emerald-400"}
               `}
             >
               Alanlarımız
             </Link>
             <Link
               href="/hakkimizda"
-              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
-                ${pathname === "/hakkimizda" ? "text-red-400" : "text-emerald-300"}
+              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
+                ${pathname === "/hakkimizda" ? "text-red-400" : "text-emerald-400"}
               `}
             >
               Hakkımızda
             </Link>
             <Link
               href="/iletisim"
-              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
-                ${pathname === "/iletisim" ? "text-red-400" : "text-emerald-300"}
+              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
+                ${pathname === "/iletisim" ? "text-red-400" : "text-emerald-400"}
               `}
             >
               İletişim
@@ -83,7 +83,7 @@ export default function Header() {
           </div>
           {/* Sağda buton */}
           <div className="hidden md:block ml-auto">
-            <Button className="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-bold shadow-xl transition-all duration-300 rounded-full">
+            <Button className="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white text-base font-bold shadow-xl transition-all duration-300 rounded-full">
               <Link href="/basvuru">
                 Uzman Görüşü Talep Et
               </Link>
@@ -104,7 +104,7 @@ export default function Header() {
             <Link
               href="/"
               className={`block w-full text-center py-3 rounded-xl font-semibold text-lg transition-all duration-200
-                ${pathname === "/" ? "bg-emerald-900/40 text-red-400" : "text-emerald-300 hover:bg-emerald-900/40 hover:text-white"}
+                ${pathname === "/" ? "bg-emerald-900/40 text-red-400" : "text-emerald-400 hover:bg-emerald-900/40 hover:text-emerald-300"}
               `}
               onClick={() => setOpen(false)}
             >
@@ -113,7 +113,7 @@ export default function Header() {
             <Link
               href="/alanlarimiz"
               className={`block w-full text-center py-3 rounded-xl font-semibold text-lg transition-all duration-200
-                ${pathname === "/alanlarimiz" ? "bg-emerald-900/40 text-red-400" : "text-emerald-300 hover:bg-emerald-900/40 hover:text-white"}
+                ${pathname === "/alanlarimiz" ? "bg-emerald-900/40 text-red-400" : "text-emerald-400 hover:bg-emerald-900/40 hover:text-emerald-300"}
               `}
               onClick={() => setOpen(false)}
             >
@@ -122,7 +122,7 @@ export default function Header() {
             <Link
               href="/hakkimizda"
               className={`block w-full text-center py-3 rounded-xl font-semibold text-lg transition-all duration-200
-                ${pathname === "/hakkimizda" ? "bg-emerald-900/40 text-red-400" : "text-emerald-300 hover:bg-emerald-900/40 hover:text-white"}
+                ${pathname === "/hakkimizda" ? "bg-emerald-900/40 text-red-400" : "text-emerald-400 hover:bg-emerald-900/40 hover:text-emerald-300"}
               `}
               onClick={() => setOpen(false)}
             >
@@ -131,13 +131,13 @@ export default function Header() {
             <Link
               href="/iletisim"
               className={`block w-full text-center py-3 rounded-xl font-semibold text-lg transition-all duration-200
-                ${pathname === "/iletisim" ? "bg-emerald-900/40 text-red-400" : "text-emerald-300 hover:bg-emerald-900/40 hover:text-white"}
+                ${pathname === "/iletisim" ? "bg-emerald-900/40 text-red-400" : "text-emerald-400 hover:bg-emerald-900/40 hover:text-emerald-300"}
               `}
               onClick={() => setOpen(false)}
             >
               İletişim
             </Link>
-            <Button className="bg-gradient-to-r from-emerald-500 to-emerald-700 hover:from-emerald-600 hover:to-emerald-800 text-white w-full rounded-full font-bold shadow-lg text-base mt-2 border-2 border-emerald-300/30" asChild>
+            <Button className="bg-gradient-to-r from-emerald-500 to-emerald-700 hover:from-emerald-600 hover:to-emerald-800 text-white w-full rounded-full shadow-lg mt-1 border-2 border-emerald-300/30" asChild>
               <Link href="/basvuru" onClick={() => setOpen(false)}>
                 Uzman Görüşü Talep Et
               </Link>
