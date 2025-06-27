@@ -60,10 +60,7 @@ export default function ContactFab() {
         {open ? (
           <X className="text-white w-7 h-7" />
         ) : (
-          <span className="relative">
-            <MessageCircle className="text-white w-7 h-7" />
-            <FaWhatsapp className="absolute -right-1 -bottom-1 w-4 h-4 text-[#25D366] bg-white rounded-full p-0.5 shadow" />
-          </span>
+          <MessageCircle className="text-white w-7 h-7" />
         )}
       </button>
     </div>
