@@ -1,8 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+
 import { ArrowLeft, Phone, Mail, MapPin, Clock, Sparkles } from "lucide-react"
 
 export default function IletisimPage() {
@@ -31,128 +30,86 @@ export default function IletisimPage() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-xl animate-fade-in">
-            <CardHeader>
-              <CardTitle className="text-white text-xl">Bize Ulaşın</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-gray-300 text-sm font-medium">Ad Soyad</label>
-                  <Input
-                    placeholder="Adınız ve soyadınız"
-                    className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-gray-300 text-sm font-medium">E-posta</label>
-                  <Input
-                    type="email"
-                    placeholder="ornek@email.com"
-                    className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
-                  />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
+            <CardContent className="p-6">
+              <div className="flex items-center space-x-4 mb-4">
+                <Phone className="w-8 h-8 text-emerald-400" />
+                <div>
+                  <h3 className="text-white font-semibold">Telefon</h3>
+                  <p className="text-gray-400">+90 (212) 555 0123</p>
+                  <p className="text-gray-400">+90 (212) 555 0124</p>
                 </div>
               </div>
-              <div className="space-y-2">
-                <label className="text-gray-300 text-sm font-medium">Telefon</label>
-                <Input
-                  placeholder="+90 (5xx) xxx xx xx"
-                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
-                />
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
+            <CardContent className="p-6">
+              <div className="flex items-center space-x-4 mb-4">
+                <Mail className="w-8 h-8 text-emerald-400" />
+                <div>
+                  <h3 className="text-white font-semibold">E-posta</h3>
+                  <p className="text-gray-400">info@bilenden.com</p>
+                  <p className="text-gray-400">destek@bilenden.com</p>
+                </div>
               </div>
-              <div className="space-y-2">
-                <label className="text-gray-300 text-sm font-medium">Konu</label>
-                <Input
-                  placeholder="Mesajınızın konusu"
-                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-gray-300 text-sm font-medium">Mesaj</label>
-                <Textarea
-                  placeholder="Mesajınızı buraya yazın..."
-                  rows={5}
-                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
-                />
-              </div>
-              <Button className="w-full bg-gradient-to-r from-emerald-500 to-emerald-700 hover:from-emerald-600 hover:to-emerald-800 text-white font-bold py-2 rounded-full shadow-lg text-lg transition-all duration-300">
-                Mesaj Gönder
+            </CardContent>
+          </Card>
+
+          {/* Hızlı Talep kartı yanına taşındı */}
+          <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
+            <CardContent className="p-6">
+              <h3 className="text-emerald-400 font-semibold mb-2">Hızlı Talep</h3>
+              <p className="text-gray-300 mb-4">Acil uzman görüşü talepleriniz için direkt arayın:</p>
+              <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-full shadow-lg text-lg transition-all duration-300">
+                Hemen Ara: +90 (212) 555 0123
               </Button>
             </CardContent>
           </Card>
 
-          {/* Contact Information */}
-          <div className="space-y-6">
-            <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-4 mb-4">
-                  <Phone className="w-8 h-8 text-emerald-400" />
-                  <div>
-                    <h3 className="text-white font-semibold">Telefon</h3>
-                    <p className="text-gray-400">+90 (212) 555 0123</p>
-                    <p className="text-gray-400">+90 (212) 555 0124</p>
-                  </div>
+          {/* Çalışma Saatleri kartı */}
+          <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
+            <CardContent className="p-6">
+              <div className="flex items-center space-x-4 mb-4">
+                <Clock className="w-8 h-8 text-emerald-400" />
+                <div>
+                  <h3 className="text-white font-semibold">Çalışma Saatleri</h3>
+                  <p className="text-gray-400">Pazartesi - Cuma: 09:00 - 18:00</p>
+                  <p className="text-gray-400">Cumartesi: 09:00 - 14:00</p>
+                  <p className="text-emerald-400 font-medium">7/24 Acil Destek</p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-4 mb-4">
-                  <Mail className="w-8 h-8 text-emerald-400" />
-                  <div>
-                    <h3 className="text-white font-semibold">E-posta</h3>
-                    <p className="text-gray-400">info@bilenden.com</p>
-                    <p className="text-gray-400">destek@bilenden.com</p>
-                  </div>
+          {/* Adres kartı en sona ve haritalı */}
+          <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow col-span-1 md:col-span-2">
+            <CardContent className="p-6">
+              <div className="flex items-center space-x-4 mb-4">
+                <MapPin className="w-8 h-8 text-emerald-400" />
+                <div>
+                  <h3 className="text-white font-semibold">Adres</h3>
+                  <p className="text-gray-400 mb-2">
+                    Okan Towers<br />
+                    Şehitkamil / Gaziantep
+                  </p>
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-4 mb-4">
-                  <MapPin className="w-8 h-8 text-emerald-400" />
-                  <div>
-                    <h3 className="text-white font-semibold">Adres</h3>
-                    <p className="text-gray-400">
-                      Maslak Mahallesi
-                      <br />
-                      Büyükdere Caddesi No: 123
-                      <br />
-                      Sarıyer / İstanbul
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-4 mb-4">
-                  <Clock className="w-8 h-8 text-emerald-400" />
-                  <div>
-                    <h3 className="text-white font-semibold">Çalışma Saatleri</h3>
-                    <p className="text-gray-400">Pazartesi - Cuma: 09:00 - 18:00</p>
-                    <p className="text-gray-400">Cumartesi: 09:00 - 14:00</p>
-                    <p className="text-emerald-400 font-medium">7/24 Acil Destek</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-gray-900 via-emerald-700 to-red-500/70 border-emerald-600 shadow-lg animate-fade-in-slow">
-              <CardContent className="p-6">
-                <h3 className="text-emerald-400 font-semibold mb-2">Hızlı Talep</h3>
-                <p className="text-gray-300 mb-4">Acil uzman görüşü talepleriniz için direkt arayın:</p>
-                <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-full shadow-lg text-lg transition-all duration-300">
-                  Hemen Ara: +90 (212) 555 0123
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+              <div className="w-full h-64 rounded-xl overflow-hidden border border-emerald-700 shadow-lg">
+                <iframe
+                  title="Okan Towers Harita"
+                  src="https://www.google.com/maps?q=Okan+Towers,+Şehitkamil,+Gaziantep&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
       {/* Animasyonlar için ekstra stiller */}

@@ -20,10 +20,15 @@ export default function BasvuruPage() {
             Bilimsel, hızlı ve güvenilir uzman görüşü için hemen başvurun.
           </p>
         </div>
-        <form className="space-y-4">
+        <form
+          className="space-y-4"
+          action="https://usebasin.com/f/57b50059d74f"
+          method="POST"
+        >
           <div>
             <label className="block text-gray-300 mb-1 font-medium">Ad Soyad</label>
             <input
+              name="adsoyad"
               type="text"
               className="w-full px-3 py-2 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:border-emerald-400 transition-all"
               required
@@ -32,6 +37,7 @@ export default function BasvuruPage() {
           <div>
             <label className="block text-gray-300 mb-1 font-medium">E-posta</label>
             <input
+              name="email"
               type="email"
               className="w-full px-3 py-2 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:border-emerald-400 transition-all"
               required
@@ -40,6 +46,7 @@ export default function BasvuruPage() {
           <div>
             <label className="block text-gray-300 mb-1 font-medium">Telefon</label>
             <input
+              name="telefon"
               type="tel"
               className="w-full px-3 py-2 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:border-emerald-400 transition-all"
               required
@@ -48,6 +55,7 @@ export default function BasvuruPage() {
           <div>
             <label className="block text-gray-300 mb-1 font-medium">Açıklama</label>
             <textarea
+              name="aciklama"
               className="w-full px-3 py-2 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:border-emerald-400 transition-all"
               rows={4}
               required

@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowLeft, Users, Clock, Shield, Phone, DollarSign, Award, Globe, Eye, Sparkles } from "lucide-react"
+import { ArrowLeft, Users, Clock, Shield, Phone, DollarSign, Award, Globe, Eye,  } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 const sliderItems = [

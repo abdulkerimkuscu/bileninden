@@ -19,7 +19,7 @@ export default function ContactFab() {
             <Phone className="text-white w-6 h-6" />
           </a>
           <a
-            href="https://wa.me/90XXXXXXXXXX"
+            href={`https://wa.me/905398227866?text=${encodeURIComponent("Merhaba, bir konu hakkında uzman görüşü raporu almak istiyorum.")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center rounded-full bg-[#25D366] shadow-lg hover:scale-110 transition"
