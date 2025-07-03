@@ -28,7 +28,7 @@ export default function Header() {
           <div className="flex items-center space-x-3 group">
             <Link href="/" className="flex items-center gap-2 select-none">
               {/* B Logo */}
-              <span className="relative flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-gray-900 via-emerald-600 to-red-600 shadow-lg font-extrabold text-white text-2xl transition-all duration-300">
+              <span className="relative flex items-center justify-center w-11 h-11 rounded-full bg-[linear-gradient(to_bottom_right,_#111827_25%,_#059669_45%,_#dc2626_90%)] shadow-lg font-extrabold text-white text-2xl transition-all duration-300">
                 B
               </span>
               {/* Bileninden Yazısı */}

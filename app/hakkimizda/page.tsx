@@ -51,14 +51,13 @@ export default function HakkimizdaPage() {
 	}, [current])
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-x-hidden relative">
-			{/* Glow ve parallax arka plan */}
+		<div className="min-h-screen bg-gradient-to-br from-emerald-900 via-gray-900 to-gray-800 relative overflow-hidden">
+			{/* Ana sayfa ile aynı animasyonlu arka plan */}
 			<div className="pointer-events-none fixed inset-0 z-0">
 				<div className="absolute left-1/2 top-0 -translate-x-1/2 w-[120vw] h-[60vh] bg-gradient-radial from-emerald-400/30 via-emerald-600/10 to-transparent blur-3xl opacity-70 animate-pulse" />
 				<div className="absolute right-0 bottom-0 w-[60vw] h-[40vh] bg-gradient-to-br from-emerald-400/20 to-transparent blur-2xl opacity-60" />
 				<div className="absolute left-0 bottom-0 w-[40vw] h-[30vh] bg-gradient-to-tr from-red-400/10 to-transparent blur-2xl opacity-40" />
 			</div>
-
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
 				<div className="mb-8 flex flex-col items-center justify-center text-center">
 					<Link

@@ -4,14 +4,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 import { ArrowLeft, Phone, Mail, MapPin, Clock, Sparkles } from "lucide-react"
 
+
+
 export default function IletisimPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
-      {/* Glow ve animasyonlu arka plan */}
+    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-gray-900 to-gray-800 relative overflow-hidden">
+      {/* Ana sayfa ile aynı animasyonlu arka plan */}
       <div className="pointer-events-none fixed inset-0 z-0">
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[90vw] h-[40vh] bg-gradient-radial from-emerald-400/30 via-emerald-600/10 to-transparent blur-3xl opacity-70 animate-pulse" />
-        <div className="absolute right-0 bottom-0 w-[50vw] h-[30vh] bg-gradient-to-br from-emerald-400/20 to-transparent blur-2xl opacity-60" />
-        <div className="absolute left-0 bottom-0 w-[30vw] h-[20vh] bg-gradient-to-tr from-red-400/10 to-transparent blur-2xl opacity-40" />
+        <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[120vw] h-[60vh] bg-gradient-radial from-emerald-400/30 via-emerald-600/10 to-transparent blur-3xl opacity-70 animate-pulse" />
+        <div className="absolute right-0 bottom-0 w-[60vw] h-[40vh] bg-gradient-to-br from-emerald-400/20 to-transparent blur-2xl opacity-60" />
+        <div className="absolute left-0 bottom-0 w-[40vw] h-[30vh] bg-gradient-to-tr from-red-400/10 to-transparent blur-2xl opacity-40" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="mb-8 flex flex-col items-center justify-center text-center">
@@ -112,35 +114,13 @@ export default function IletisimPage() {
           </Card>
         </div>
       </div>
-      {/* Animasyonlar için ekstra stiller */}
       <style>{`
-        @keyframes spin-slow {
-          0% { transform: rotate(0deg);}
-          100% { transform: rotate(360deg);}
-        }
-        .animate-spin-slow {
-          animation: spin-slow 8s linear infinite;
-        }
-        @keyframes glow {
-          0%,100% { box-shadow: 0 0 24px 8px #34d39944, 0 0 0 0 #fff0;}
-          50% { box-shadow: 0 0 48px 16px #34d39999, 0 0 0 0 #fff0;}
-        }
-        .animate-glow {
-          animation: glow 3s ease-in-out infinite;
-        }
         @keyframes fade-in {
           from { opacity: 0; transform: translateY(30px);}
           to { opacity: 1; transform: translateY(0);}
         }
         .animate-fade-in { animation: fade-in 1s cubic-bezier(.4,0,.2,1) both; }
         .animate-fade-in-slow { animation: fade-in 1.5s .2s cubic-bezier(.4,0,.2,1) both; }
-        @keyframes bounce-slow {
-          0%,100% { transform: translateY(0);}
-          50% { transform: translateY(-6px);}
-        }
-        .animate-bounce-slow {
-          animation: bounce-slow 2.5s infinite;
-        }
       `}</style>
     </div>
   )
