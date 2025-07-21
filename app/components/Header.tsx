@@ -65,6 +65,14 @@ export default function Header() {
               Alanlarımız
             </Link>
             <Link
+              href="/nasil-calisiyoruz"
+              className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
+                ${pathname === "/nasil-calisiyoruz" ? "text-red-400" : "text-emerald-400"}
+              `}
+            >
+              Nasıl Çalışıyoruz?
+            </Link>
+            <Link
               href="/hakkimizda"
               className={`relative px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-emerald-900/40 hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-400 focus:outline-none
                 ${pathname === "/hakkimizda" ? "text-red-400" : "text-emerald-400"}
@@ -118,6 +126,15 @@ export default function Header() {
               onClick={() => setOpen(false)}
             >
               Alanlarımız
+            </Link>
+            <Link
+              href="/nasil-calisiyoruz"
+              className={`block w-full text-center py-3 rounded-xl font-semibold text-lg transition-all duration-200
+                ${pathname === "/nasil-calisiyoruz" ? "bg-emerald-900/40 text-red-400" : "text-emerald-400 hover:bg-emerald-900/40 hover:text-emerald-300"}
+              `}
+              onClick={() => setOpen(false)}
+            >
+              Nasıl Çalışıyoruz?
             </Link>
             <Link
               href="/hakkimizda"

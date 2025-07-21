@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
-  Car, Briefcase, Home, Users, BookOpen, Hammer, Zap, HardHat, Leaf, FileText, ArrowLeft
+  Car, Briefcase, Home, Users, BookOpen, Hammer, Zap, HardHat, Leaf, FileText, ArrowLeft, PenLine, Building2, Stamp
 } from "lucide-react"
 
 export default function AlanlarimizPage() {
@@ -9,111 +9,101 @@ export default function AlanlarimizPage() {
     {
       icon: Car,
       title: "Trafik Kazaları ve Kusur Oranı Tespiti",
-      description: "Araç hız analizi, çarpışma noktası tespiti, teknik kusur belirlenmesi.",
+      description: "Trafik kazalarının teknik analizleri ve kusur oranlarının maddi gerçeğe uygun şekilde tespiti.",
       features: [
-        "Araç hız analizi",
-        "Çarpışma noktası tespiti",
-        "Teknik kusur belirlenmesi"
+        "Teknik analiz ve kusur oranı tespiti",
+        "Delil, kroki, tutanak ve kamera görüntülerinin incelenmesi",
+        "Uzman raporları ile maddi gerçeğin ortaya konulması"
       ],
       experts: "Makine mühendisleri, trafik bilirkişileri, adli trafik uzmanları"
     },
     {
       icon: Briefcase,
-      title: "İşçilik Alacakları ve SGK İncelemeleri",
-      description: "Kıdem tazminatı, fazla mesai, yıllık izin, prim tespiti.",
+      title: "Aktüerya Hesaplamaları",
+      description: "Destekten yoksun kalma, maluliyet ve iş kazası tazminatlarının bilimsel hesaplanması.",
       features: [
-        "Kıdem tazminatı",
-        "Fazla mesai",
-        "Yıllık izin",
-        "Prim tespiti"
+        "Destekten yoksun kalma tazminatı",
+        "Kalıcı/geçici maluliyet tazminatı",
+        "İş kazası ve meslek hastalığı tazminatı"
       ],
-      experts: "Serbest muhasebeci mali müşavir (SMMM), SGK uzmanı"
+      experts: "Aktüerler, sigorta uzmanları"
+    },
+    {
+      icon: Hammer,
+      title: "Deprem Sonrası Taşınmaz Hasar Durumu Değerlendirme",
+      description: "Deprem sonrası taşınmazların yapısal hasarları ve risk analizi.",
+      features: [
+        "Hasar, çatlak ve deformasyon incelemesi",
+        "Risk analizi ve güçlendirme önerileri",
+        "Ekspertiz raporları ile hukuki süreç desteği"
+      ],
+      experts: "İnşaat mühendisleri, yapı denetim uzmanları"
     },
     {
       icon: Home,
-      title: "Taşınmaz Değerleme ve Kamulaştırma",
-      description: "Arsa, tarla, konut gibi gayrimenkullerin piyasa değeri.",
+      title: "Menkul ve Gayrimenkul Değerleme",
+      description: "Taşınır ve taşınmazların piyasa değerinin tespiti, kamulaştırma ve değer düşüklüğü analizleri.",
       features: [
-        "Arsa",
-        "Tarla",
-        "Konut gibi gayrimenkullerin piyasa değeri"
+        "Kamulaştırma bedel tespiti",
+        "Emsal, gelir ve maliyet yöntemleriyle değerleme",
+        "Değer düşüklüğü analizleri"
       ],
       experts: "Gayrimenkul değerleme uzmanı, şehir plancısı, harita mühendisi"
     },
     {
-      icon: Users,
-      title: "Miras ve Taksim Uyuşmazlıkları",
-      description: "Veraset ve intikal, tereke paylaşımı, taşınmazın bölünmesi.",
+      icon: PenLine,
+      title: "İmza, Yazı, Ses, Görüntü ve Dijital Belge İncelemeleri",
+      description: "El yazısı, imza, ses ve görüntü kayıtlarının doğruluk ve sahtecilik analizleri.",
       features: [
-        "Veraset ve intikal",
-        "Tereke paylaşımı",
-        "Taşınmazın bölünmesi"
+        "El yazısı ve imza incelemesi",
+        "Ses/görüntü doğruluk ve montaj analizi",
+        "Dijital belgelerin orijinallik ve zaman damgası kontrolü"
       ],
-      experts: "Harita mühendisi, ziraat mühendisi, hukukçu bilirkişiler"
+      experts: "Adli bilişim uzmanları, grafolog, yazılım mühendisleri"
+    },
+    {
+      icon: Briefcase,
+      title: "İşçilik Alacakları ve SGK İncelemeleri",
+      description: "Kıdem, ihbar, fazla mesai, yıllık izin ve SGK primlerinin teknik incelemesi.",
+      features: [
+        "İşçilik alacaklarının hesaplanması",
+        "SGK primleri ve kayıt dışı çalışma incelemesi",
+        "Teknik raporlarla işe iade ve kötü niyet tazminatı"
+      ],
+      experts: "Serbest muhasebeci mali müşavir (SMMM), SGK uzmanı"
     },
     {
       icon: BookOpen,
       title: "Adli Muhasebe ve Defter İncelemeleri",
-      description: "Ticari defterlerin usule uygunluğu, şirket ortaklık uyuşmazlıkları.",
+      description: "Ticari defterlerin mevzuata uygunluğu ve mali kayıtların analizi.",
       features: [
-        "Ticari defterlerin usule uygunluğu",
-        "Şirket ortaklık uyuşmazlıkları"
+        "Defter ve belgelerin mevzuata uygunluk incelemesi",
+        "Ortaklık uyuşmazlıkları ve usulsüzlük analizi",
+        "Adli/idari süreçler için uzman görüşü"
       ],
       experts: "YMM, SMMM, denetçiler"
     },
     {
-      icon: Hammer,
-      title: "İnşaat ve İmar Uyuşmazlıkları",
-      description: "Hatalı inşaat, ruhsatsız yapı, yapı denetimi kusurları.",
+      icon: Building2,
+      title: "İmar Planları İncelemesi",
+      description: "İmar planlarının mevzuata uygunluğu ve yapılaşma haklarının analizi.",
       features: [
-        "Hatalı inşaat",
-        "Ruhsatsız yapı",
-        "Yapı denetimi kusurları"
+        "Plan notları ve kullanım koşulları incelemesi",
+        "Plan değişiklikleri ve yapılaşma hakları analizi",
+        "Mevzuat ve teknik kriterlere göre değerlendirme"
       ],
-      experts: "İnşaat mühendisi, mimar, yapı denetim uzmanı"
+      experts: "Şehir plancısı, harita mühendisi, mimar"
     },
     {
-      icon: Zap,
-      title: "Elektrik, Enerji ve Yangın İncelemeleri",
-      description: "Elektrik arızası kaynaklı zarar, trafo yangınları, kaçak kullanım tespiti.",
+      icon: Stamp,
+      title: "Patent, Marka ve Fikri Mülkiyet İncelemeleri",
+      description: "Fikri mülkiyet hakları, patent ve marka ihlallerinin teknik ve hukuki analizi.",
       features: [
-        "Elektrik arızası kaynaklı zarar",
-        "Trafo yangınları",
-        "Kaçak kullanım tespiti"
+        "Fikri mülkiyet uyuşmazlıklarının teknik analizi",
+        "Patent ve marka ihlali tespitleri",
+        "Hak sahipliği ve stratejik öneriler"
       ],
-      experts: "Elektrik mühendisleri"
-    },
-    {
-      icon: HardHat,
-      title: "İşyeri Kazaları ve Meslek Hastalıkları",
-      description: "İş güvenliği ihlalleri, kaza nedenlerinin belirlenmesi.",
-      features: [
-        "İş güvenliği ihlalleri",
-        "Kaza nedenlerinin belirlenmesi"
-      ],
-      experts: "İş sağlığı ve güvenliği uzmanları, işyeri hekimleri"
-    },
-    {
-      icon: Leaf,
-      title: "Tarım, Ürün Verimliliği ve Doğal Afet Tespitleri",
-      description: "Ürün zararı, tarımsal üretim kaybı, afet hasar tespiti.",
-      features: [
-        "Ürün zararı",
-        "Tarımsal üretim kaybı",
-        "Afet hasar tespiti"
-      ],
-      experts: "Ziraat mühendisleri"
-    },
-    {
-      icon: FileText,
-      title: "Ses, Görüntü, Yazı ve Dijital Belge İncelemeleri (Bilişim)",
-      description: "Ses kayıtlarının doğruluğu, belge sahteciliği, dijital izlerin analizi.",
-      features: [
-        "Ses kayıtlarının doğruluğu",
-        "Belge sahteciliği",
-        "Dijital izlerin analizi"
-      ],
-      experts: "Adli bilişim uzmanları, grafolog, yazılım mühendisleri"
+      experts: "Patent vekili, marka uzmanı, hukukçu"
     }
   ]
 
